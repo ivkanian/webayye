@@ -793,6 +793,71 @@ ul { list-style: none; }
 .contact__social:hover { color: var(--color-lavender); }
 
 /* =============================================
+   FLOATING SOCIALS
+   ============================================= */
+.social-float {
+  position: fixed;
+  right: calc(1rem + env(safe-area-inset-right, 0px));
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.9rem;
+  height: 3.9rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  animation: social-float 3s ease-in-out infinite;
+}
+
+.social-float:hover {
+  animation-play-state: paused;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.social-float svg {
+  flex-shrink: 0;
+}
+
+.social-float span {
+  display: none;
+}
+
+.social-float--instagram {
+  bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(135deg, #feda75 0%, #fa7e1e 28%, #d62976 58%, #962fbf 82%, #4f5bd5 100%);
+  box-shadow:
+    0 1rem 2rem rgba(214, 41, 118, 0.26),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+.social-float--instagram:hover {
+  box-shadow:
+    0 1.2rem 2.4rem rgba(214, 41, 118, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.24) inset;
+}
+
+.social-float--whatsapp {
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(135deg, #25d366 0%, #1fb857 100%);
+  box-shadow:
+    0 1rem 2rem rgba(37, 211, 102, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+.social-float--whatsapp:hover {
+  box-shadow:
+    0 1.2rem 2.4rem rgba(37, 211, 102, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.24) inset;
+  background: linear-gradient(135deg, #28df6d 0%, #1fb857 100%);
+}
+
+@keyframes social-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* =============================================
    FOOTER
    ============================================= */
 .footer {
@@ -998,6 +1063,20 @@ ul { list-style: none; }
     align-items: center;
     gap: var(--space-sm);
   }
+
+  .social-float {
+    right: calc(0.9rem + env(safe-area-inset-right, 0px));
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .social-float--instagram {
+    bottom: calc(5.15rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .social-float--whatsapp {
+    bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  }
 }
 
 /* ---- Small phones (≤ 420px) ---- */
@@ -1025,4 +1104,10 @@ ul { list-style: none; }
   }
 
   .nav__logo-text { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-float {
+    animation: none;
+  }
 }
