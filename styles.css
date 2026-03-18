@@ -507,10 +507,32 @@ ul { list-style: none; }
 }
 
 .spec-card__icon {
-  font-size: 1.4rem;
-  color: var(--color-purple-soft);
-  margin-bottom: 0.5rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  color: var(--color-purple);
+  background: linear-gradient(145deg, rgba(215, 202, 241, 0.34), rgba(237, 248, 237, 0.78));
+  box-shadow:
+    inset 0 0 0 1px rgba(60, 47, 87, 0.08),
+    0 10px 22px rgba(60, 47, 87, 0.08);
+}
+
+.spec-card__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
   display: block;
+}
+
+.spec-card:hover .spec-card__icon {
+  color: var(--color-purple-soft);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 0 0 1px rgba(60, 47, 87, 0.1),
+    0 12px 26px rgba(60, 47, 87, 0.12);
 }
 
 .spec-card h3 {
@@ -525,6 +547,11 @@ ul { list-style: none; }
   font-size: 0.85rem;
   color: var(--color-muted);
   line-height: 1.55;
+}
+
+.spec-card,
+.spec-card__icon {
+  transition: transform var(--transition), box-shadow var(--transition), color var(--transition);
 }
 
 /* =============================================
@@ -680,10 +707,37 @@ ul { list-style: none; }
 }
 
 .online__icon {
-  font-size: 1.6rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-sm);
+  border-radius: 50%;
   color: var(--color-purple);
+  background: linear-gradient(145deg, rgba(215, 202, 241, 0.35), rgba(237, 248, 237, 0.8));
+  box-shadow:
+    inset 0 0 0 1px rgba(60, 47, 87, 0.08),
+    0 10px 24px rgba(60, 47, 87, 0.08);
+}
+
+.online__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
   display: block;
-  margin-bottom: var(--space-sm);
+}
+
+.online__card:hover .online__icon {
+  color: var(--color-purple-soft);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 0 0 1px rgba(60, 47, 87, 0.1),
+    0 12px 28px rgba(60, 47, 87, 0.12);
+}
+
+.online__icon,
+.online__card {
+  transition: transform var(--transition), box-shadow var(--transition), color var(--transition);
 }
 
 .online__card h3 {
@@ -805,8 +859,10 @@ ul { list-style: none; }
   width: 3.9rem;
   height: 3.9rem;
   border-radius: 50%;
-  color: var(--color-white);
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+  border: 1px solid rgba(60, 47, 87, 0.1);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
   animation: social-float 3s ease-in-out infinite;
 }
 
@@ -825,6 +881,7 @@ ul { list-style: none; }
 
 .social-float--instagram {
   bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+  color: var(--color-white);
   background: linear-gradient(135deg, #feda75 0%, #fa7e1e 28%, #d62976 58%, #962fbf 82%, #4f5bd5 100%);
   box-shadow:
     0 1rem 2rem rgba(214, 41, 118, 0.26),
@@ -832,6 +889,7 @@ ul { list-style: none; }
 }
 
 .social-float--instagram:hover {
+  color: var(--color-white);
   box-shadow:
     0 1.2rem 2.4rem rgba(214, 41, 118, 0.34),
     0 0 0 1px rgba(255, 255, 255, 0.24) inset;
@@ -839,6 +897,7 @@ ul { list-style: none; }
 
 .social-float--whatsapp {
   bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  color: var(--color-white);
   background: linear-gradient(135deg, #25d366 0%, #1fb857 100%);
   box-shadow:
     0 1rem 2rem rgba(37, 211, 102, 0.28),
@@ -846,6 +905,7 @@ ul { list-style: none; }
 }
 
 .social-float--whatsapp:hover {
+  color: var(--color-white);
   box-shadow:
     0 1.2rem 2.4rem rgba(37, 211, 102, 0.35),
     0 0 0 1px rgba(255, 255, 255, 0.24) inset;
