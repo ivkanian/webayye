@@ -695,37 +695,33 @@ ul { list-style: none; }
 }
 
 .online__icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3.25rem;
+  height: 3.25rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto var(--space-sm);
   border-radius: 50%;
-  color: var(--color-purple);
-  background: #f4f8f4;
+  background: #f7f2fb;
   box-shadow:
     inset 0 0 0 1px rgba(60, 47, 87, 0.08),
-    0 10px 24px rgba(60, 47, 87, 0.08);
-}
-
-.online__icon svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: block;
+    0 10px 22px rgba(60, 47, 87, 0.08);
+  font-size: 1.35rem;
+  line-height: 1;
+  filter: saturate(0.95);
 }
 
 .online__card:hover .online__icon {
-  color: var(--color-purple-soft);
   transform: translateY(-1px);
   box-shadow:
     inset 0 0 0 1px rgba(60, 47, 87, 0.1),
-    0 12px 28px rgba(60, 47, 87, 0.12);
+    0 12px 26px rgba(60, 47, 87, 0.12);
+  filter: saturate(1);
 }
 
 .online__icon,
 .online__card {
-  transition: transform var(--transition), box-shadow var(--transition), color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
 }
 
 .online__card h3 {
@@ -746,7 +742,12 @@ ul { list-style: none; }
    ============================================= */
 .testimonials {
   padding: var(--space-2xl) 0;
-  background: var(--color-cream);
+  background: #f4eef9;
+  border-top: 1px solid rgba(230, 222, 243, 0.92);
+  border-bottom: 1px solid rgba(230, 222, 243, 0.78);
+  box-shadow:
+    inset 0 1.1rem 1.8rem rgba(255, 255, 255, 0.46),
+    inset 0 -1rem 1.6rem rgba(230, 222, 243, 0.14);
 }
 
 .testimonials__grid {
@@ -784,12 +785,12 @@ ul { list-style: none; }
    ============================================= */
 .contact {
   padding: var(--space-2xl) 0;
-  background-color: #f7f3fa;
-  border-top: 1px solid rgba(229, 216, 240, 0.9);
-  border-bottom: 1px solid rgba(229, 216, 240, 0.9);
+  background-color: #f1f7f2;
+  border-top: 1px solid rgba(223, 240, 230, 0.92);
+  border-bottom: 1px solid rgba(223, 240, 230, 0.78);
   box-shadow:
-    inset 0 1.2rem 2rem rgba(255, 255, 255, 0.45),
-    inset 0 -1.2rem 2rem rgba(230, 222, 243, 0.18);
+    inset 0 1.2rem 2rem rgba(255, 255, 255, 0.44),
+    inset 0 -1.2rem 2rem rgba(159, 203, 176, 0.12);
 }
 
 .contact .section-eyebrow { color: var(--color-purple-soft); }
