@@ -14,6 +14,15 @@
   --color-muted:    #7a6887;
   --color-white:    #ffffff;
   --color-border:   #e5d8f0;
+  --surface-paper:  #fffdfb;
+  --surface-lilac:  #f5f0f8;
+  --surface-ivory:  #fcf8f4;
+  --surface-mint:   #f1f6f2;
+  --surface-blush:  #faf3f7;
+  --surface-sage:   #f4f7f3;
+  --divider-lilac:  rgba(230, 222, 243, 0.7);
+  --divider-blush:  rgba(242, 214, 230, 0.56);
+  --divider-mint:   rgba(223, 240, 230, 0.8);
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body:    'Montserrat', system-ui, sans-serif;
@@ -435,7 +444,7 @@ ul { list-style: none; }
    ============================================= */
 .about {
   padding: var(--space-2xl) 0;
-  background: var(--color-white);
+  background: var(--surface-paper);
 }
 
 .about__grid {
@@ -521,9 +530,9 @@ ul { list-style: none; }
    ============================================= */
 .specialties {
   padding: var(--space-2xl) 0;
-  background: #f5eff8;
-  border-top: 1px solid rgba(229, 216, 240, 0.9);
-  border-bottom: 1px solid rgba(229, 216, 240, 0.9);
+  background: var(--surface-lilac);
+  border-top: 1px solid var(--divider-lilac);
+  border-bottom: 1px solid var(--divider-lilac);
 }
 
 .specialties .section-heading { color: var(--color-violet); }
@@ -596,7 +605,9 @@ ul { list-style: none; }
    ============================================= */
 .tcc {
   padding: var(--space-2xl) 0;
-  background: #f8f5fb;
+  background: var(--surface-ivory);
+  border-top: 1px solid var(--divider-lilac);
+  border-bottom: 1px solid var(--divider-lilac);
 }
 
 .tcc__grid {
@@ -666,9 +677,9 @@ ul { list-style: none; }
    ============================================= */
 .online {
   padding: var(--space-2xl) 0;
-  background: #f1f6f2;
-  border-top: 1px solid rgba(223, 240, 230, 0.95);
-  border-bottom: 1px solid rgba(223, 240, 230, 0.95);
+  background: var(--surface-mint);
+  border-top: 1px solid var(--divider-mint);
+  border-bottom: 1px solid var(--divider-mint);
 }
 
 .online .section-heading { color: var(--color-violet); }
@@ -742,12 +753,9 @@ ul { list-style: none; }
    ============================================= */
 .testimonials {
   padding: var(--space-2xl) 0;
-  background: #f4eef9;
-  border-top: 1px solid rgba(230, 222, 243, 0.92);
-  border-bottom: 1px solid rgba(230, 222, 243, 0.78);
-  box-shadow:
-    inset 0 1.1rem 1.8rem rgba(255, 255, 255, 0.46),
-    inset 0 -1rem 1.6rem rgba(230, 222, 243, 0.14);
+  background: var(--surface-blush);
+  border-top: 1px solid var(--divider-blush);
+  border-bottom: 1px solid var(--divider-blush);
 }
 
 .testimonials__grid {
@@ -785,12 +793,9 @@ ul { list-style: none; }
    ============================================= */
 .contact {
   padding: var(--space-2xl) 0;
-  background-color: #f1f7f2;
-  border-top: 1px solid rgba(223, 240, 230, 0.92);
-  border-bottom: 1px solid rgba(223, 240, 230, 0.78);
-  box-shadow:
-    inset 0 1.2rem 2rem rgba(255, 255, 255, 0.44),
-    inset 0 -1.2rem 2rem rgba(159, 203, 176, 0.12);
+  background-color: var(--surface-sage);
+  border-top: 1px solid var(--divider-mint);
+  border-bottom: 1px solid var(--divider-mint);
 }
 
 .contact .section-eyebrow { color: var(--color-purple-soft); }
@@ -918,9 +923,9 @@ ul { list-style: none; }
    FOOTER
    ============================================= */
 .footer {
-  background: #faf7fc;
+  background: var(--surface-lilac);
   padding: var(--space-lg) 0 var(--space-md);
-  border-top: 1px solid rgba(229, 216, 240, 0.9);
+  border-top: 1px solid var(--divider-lilac);
 }
 
 .footer__top {
