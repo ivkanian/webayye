@@ -801,6 +801,10 @@ ul { list-style: none; }
 
 .contact .section-eyebrow { color: var(--color-purple-soft); }
 .contact .section-heading { color: var(--color-violet); }
+.contact .section-heading::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .contact .section-eyebrow,
 .contact .section-heading {
